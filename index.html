@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Yana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="inputSection">
+            <h1>I Wanna Tell You Something...</h1>
+            <p>Sino ka muna?:</p>
+            <input type="text" id="userInput" placeholder="Your name here..." autocomplete="off">
+            <br>
+            <button onclick="revealSecret()">Abrakdabra Open Sesame</button>
+        </div>
+        
+        <div id="secretMessage" class="hidden">
+            <h2 id="displayMessage"></h2>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

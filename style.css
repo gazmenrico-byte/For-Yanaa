@@ -1,0 +1,96 @@
+body {
+    background: #fffdf0; /* Very pale yellow cream */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2); /* Gold shadow */
+    width: 85%;
+    max-width: 400px;
+    z-index: 10;
+    border: 2px solid #ffecb3; /* Soft amber border */
+}
+
+h1 { 
+    color: #fbc02d; /* Honey Yellow */
+    font-family: 'Grand Hotel', cursive;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+#displayMessage {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 2rem;
+    color: #f9a825; /* Darker Gold for readability */
+    line-height: 1.4;
+}
+
+/* Typing Cursor */
+#displayMessage::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    color: #fbc02d;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+input {
+    padding: 12px;
+    width: 80%;
+    border: 1.5px solid #ffe082;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+    background: #fffef2;
+}
+
+button {
+    background: linear-gradient(45deg, #fbc02d, #ffeb3b);
+    color: #5d4037; /* Dark brown text looks better on yellow */
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(251, 192, 45, 0.3);
+}
+
+button:active { transform: scale(0.95); }
+
+.hidden { display: none; }
+
+/* Sparkle Animation Styling */
+.sparkle {
+    position: fixed;
+    top: -20px;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
